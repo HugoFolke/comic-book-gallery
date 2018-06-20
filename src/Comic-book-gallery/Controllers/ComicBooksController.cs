@@ -17,6 +17,13 @@ namespace Comic_book_gallery.Controllers
             _comicBookRepository = new ComicBookRepository();
         }
 
+        public ActionResult Index()
+        {
+            var comicBook = _comicBookRepository.GetComicBooks();
+
+            return View(comicBook);
+        }
+
         public ActionResult Detail(int? id)
         {
             if (id == null)
