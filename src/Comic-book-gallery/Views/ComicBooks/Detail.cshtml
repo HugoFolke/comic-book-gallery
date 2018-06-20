@@ -23,11 +23,11 @@
 </head>
 <body>
     <div>
-        <h1>@</h1>
-        <h2>Issue#@</h2>
+        <h1>@seriesTitle</h1>
+        <h2>Issue#@issueNumber</h2>
 
         <h5>Description:</h5>
-        <div>@</div>
+        <div>@Html.Raw(description)</div>
 
         @if (artists.Length > 0)
         {
@@ -36,7 +36,7 @@
                 <ul>
                     @foreach (var artist in artists)
                     {
-                        <li>@</li>
+                        <li>@artist</li>
                     }
 
                 </ul>
