@@ -4,7 +4,7 @@
     var seriesTitle = "The Amazing Spiderman";
     var issueNumber = 700;
     var description = "<p>Final issue! Witness the final hours of Doctor Octopus' life and his one, last, great act of revenge! Even if Spider-Man survives... <strong>will Peter Parker?</strong></p>";
-    var artist = new string[]
+    var artists = new string[]
     {
         "Script: Dan Slott",
         "Pencils: Humberto Ramos",
@@ -23,14 +23,27 @@
 </head>
 <body>
     <div>
-        <h1>@seriesTitle</h1>
-        <h2>Issue#@issueNumber</h2>
+        <h1>@</h1>
+        <h2>Issue#@</h2>
 
         <h5>Description:</h5>
-        <div>@Html.Raw(description)</div>
+        <div>@</div>
 
-        <h5>Artist:</h5>
-        <div>@artist</div>
+        @if (artists.Length > 0)
+        {
+            <h5>Artist:</h5>
+            <div>
+                <ul>
+                    @foreach (var artist in artists)
+                    {
+                        <li>@</li>
+                    }
+
+                </ul>
+
+            </div>
+        }
+
     </div>
 </body>
 </html>
